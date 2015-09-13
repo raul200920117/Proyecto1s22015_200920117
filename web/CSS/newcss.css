@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9/09/2015, 11:44:01 PM
+    Author     : Raulk
+*/
+
+body {
+    background: url(../images/fondo3.jpg);    
+}
+
+.Titulo {
+    position: relative;
+    color: red;
+    font-size: 25px;
+    left: 25%;
+    width: 50%; 
+    height: 100px;
+    border-radius: 25px;
+    border: 2px solid #8AC007;
+}
+.barra {
+    color: orangered;
+    font-size: 12px;
+    border-radius: 25px;
+    border: 2px solid #8FF007;
+}
+
+.login {
+    position: relative;
+    top:45%;
+    left:45%;
+    width: 150px; 
+    height: 100px;
+    border-radius: 25px;
+    border: 2px solid #8AC007;
+}
+
+.cajaFlotante {
+    display: inline-block;
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    border: 3px solid #000000;  
+}
+
+#rcorners1 {
+    border-radius: 25px;
+    background: #8AC007;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
+}
+
+#rcorners3 {
+    border-radius: 25px;
+    background: url(paper.gif);
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;    
+}
