@@ -9,10 +9,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Administrador</title>
         <link href="CSS/newcss.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+        
+                
+         <div class="Titulo" align="center">
+           <h1>Ingresar al sistema</h1>
+        </div>
+        
            <td><table width="250" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td width="17"><img src="images/menu_left.gif" width="17" height="40" /></td>
@@ -42,6 +48,43 @@
                                         return true;"> <img src="images/contact.gif" name="contact" width="80" height="39" border="0" /></a></td>
             </tr>
         </table></td>
+
+    
+
+
+        <input type="file" name="subir" value="" width="175" /><br>
+        <br>
+        <br>
+        
+        
+        <form class="cajaFlotante" name="coso" action="admin.jsp">
+            <input type="text" name="rest" value="0" /><br>
+                <input type="text" name="fre" value="0" /><br>
+                <input type="submit" value="enviar" name="bot" /><br>
+        </form>
+        
+        <div class="cajaFlotante">
+                <input type="text" name="rest" value="0" /><br>
+                <input type="text" name="fre" value="0" /><br>
+                <input type="submit" value="enviar" name="bot" /><br>
+        </div>
+        
+        <div class="cajaFlotante">
+            <input type="text" name="rest" value="0" /><br>
+            <input type="text" name="fre" value="0" /><br>
+            <input type="submit" value="enviar" name="bot" /><br>
+            
+        </div>
+        <div class="cajaFlotante"></div>
+        <div class="cajaFlotante"></div>
+        <div class="cajaFlotante"></div>
+        <div class="cajaFlotante"></div>
+        <div class="cajaFlotante"></div>
+        <div class="cajaFlotante"></div>
+        <div class="cajaFlotante"></div>
+        
+    
+
 
     </body>
 </html>
