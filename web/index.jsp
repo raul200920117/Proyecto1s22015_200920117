@@ -19,7 +19,7 @@
         </div>
     
         
-        <div class="barra">
+        <div class="barra" align="center">
            <table width="250" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td width="17"><img src="images/menu_left.gif" width="17" height="40" /></td>
@@ -52,30 +52,41 @@
             
         </div>
         
-       <div class="login" align="center" >
-           Ingresar
-           <input type="text" name="ingresar" value="" />
-           <input type="password" name="pass" value="" />
-           <input type="submit" value="ingresar" name="boton1" />
-       </div> 
+  
+        
+        <form align="center" name="login" action="index.jsp" >
+            Ingresar
+           <h5>Usuario: </h5>
+           <input type="text" name="ingresar" value="0" />
+           <h5>Contraseña: </h5>
+           <input type="password" name="pass" value="0" /><br>
+           <input type="submit" value="ingresar" name="boton1" />     
+        </form>
+        
+            <%-- start web service invocation --%><hr/>
+    <%
+        
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	 // TODO initialize WS operation arguments here
+	java.lang.String nombre = request.getParameter("ingresar");
+	java.lang.String pass = request.getParameter("pass");
+	// TODO process result here
+	boolean result = port.login(nombre, pass);
+        if(result){
+           response.sendRedirect("admin.jsp");
+        }else{
+	out.println("<h1> la contraseña o el usuario no son validos</h1>");
+        }
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    
+    
+    %>
+    <%-- end web service invocation --%><hr/>
 
-        <input type="file" name="subir" value="" width="175" /><br>
-        
-        <div class="cajaFlotante">
-                <input type="text" name="rest" value="0" /><br>
-                <input type="text" name="fre" value="0" /><br>
-                <input type="submit" value="enviar" name="bot" /><br>
-        </div>
-        
-        <div class="cajaFlotante"></div>
-        <div class="cajaFlotante"></div>
-        <div class="cajaFlotante"></div>
-        <div class="cajaFlotante"></div>
-        <div class="cajaFlotante"></div>
-        <div class="cajaFlotante"></div>
-        <div class="cajaFlotante"></div>
-        <div class="cajaFlotante"></div>
-        
     
 
 </body>

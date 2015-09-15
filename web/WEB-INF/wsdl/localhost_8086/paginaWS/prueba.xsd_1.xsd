@@ -8,6 +8,10 @@
 
 <xs:element name="helloResponse" type="tns:helloResponse" />
 
+<xs:element name="login" type="tns:login" />
+
+<xs:element name="loginResponse" type="tns:loginResponse" />
+
 <xs:element name="mostrar" type="tns:mostrar" />
 
 <xs:element name="mostrarResponse" type="tns:mostrarResponse" />
@@ -43,6 +47,19 @@
 <xs:complexType name="borrarEstacionClaveResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="login">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="loginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

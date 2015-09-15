@@ -16,9 +16,10 @@
         
                 
          <div class="Titulo" align="center">
-           <h1>Ingresar al sistema</h1>
+           <h1>Sistema administrador</h1>
         </div>
         
+        <div class="barra" align="center">
            <td><table width="250" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 <td width="17"><img src="images/menu_left.gif" width="17" height="40" /></td>
@@ -48,7 +49,7 @@
                                         return true;"> <img src="images/contact.gif" name="contact" width="80" height="39" border="0" /></a></td>
             </tr>
         </table></td>
-
+        </div>
     
 
 
@@ -56,7 +57,7 @@
         <br>
         <br>
         
-        
+     
         <form class="cajaFlotante" name="coso" action="admin.jsp">
             <input type="text" name="rest" value="0" pattern="[A-Za-z]{3}"/><br>
                 <input type="text" name="fre" value="0" /><br>
@@ -86,10 +87,6 @@
     
         <%-- start web service invocation --%><hr/>
     <%
-    int z=5;
-    if(z > 4 ){
-        
-    }
     
     try {
 	estructura.Prueba_Service service = new estructura.Prueba_Service();
