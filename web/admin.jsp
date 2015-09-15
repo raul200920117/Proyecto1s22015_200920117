@@ -58,19 +58,57 @@
         
         
         <form class="cajaFlotante" name="coso" action="admin.jsp">
-            <input type="text" name="rest" value="0" /><br>
+            <input type="text" name="rest" value="0" pattern="[A-Za-z]{3}"/><br>
                 <input type="text" name="fre" value="0" /><br>
                 <input type="submit" value="enviar" name="bot" /><br>
         </form>
-        
+                    <%-- start web service invocation --%><hr/>
+            <%
+                try {
+                    estructura.Prueba_Service service = new estructura.Prueba_Service();
+                    estructura.Prueba port = service.getPruebaPort();
+                    // TODO initialize WS operation arguments here
+                    java.lang.String name = request.getParameter("rest");
+                    // TODO process result here
+                    java.lang.String result = port.hello(name);
+                    out.println("Result = " + result);
+                } catch (Exception ex) {
+                    // TODO handle custom exceptions here
+                }
+            %>
+            <%-- end web service invocation --%><hr/>
+
         <div class="cajaFlotante">
                 <input type="text" name="rest" value="0" /><br>
                 <input type="text" name="fre" value="0" /><br>
                 <input type="submit" value="enviar" name="bot" /><br>
         </div>
+    
+        <%-- start web service invocation --%><hr/>
+    <%
+    int z=5;
+    if(z > 4 ){
+        
+    }
+    
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	// TODO process result here
+	java.lang.String result = port.mostrar();
+	out.println("datos en el arbol= <br> " + result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    
+    %>
+    <%-- end web service invocation --%><hr/>
+
+
+
         
         <div class="cajaFlotante">
-            <input type="text" name="rest" value="0" /><br>
+            <input type="text" name="rest" pattern="[A-Za-z]{5}" value="0" /><br>
             <input type="text" name="fre" value="0" /><br>
             <input type="submit" value="enviar" name="bot" /><br>
             
@@ -82,9 +120,6 @@
         <div class="cajaFlotante"></div>
         <div class="cajaFlotante"></div>
         <div class="cajaFlotante"></div>
-        
-    
-
-
+     
     </body>
 </html>

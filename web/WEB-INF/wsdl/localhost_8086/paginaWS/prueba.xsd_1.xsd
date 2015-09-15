@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://estructura/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://estructura/">
+
+<xs:element name="borrarEstacionClave" type="tns:borrarEstacionClave" />
+
+<xs:element name="borrarEstacionClaveResponse" type="tns:borrarEstacionClaveResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:element name="mostrar" type="tns:mostrar" />
+
+<xs:element name="mostrarResponse" type="tns:mostrarResponse" />
+
+<xs:complexType name="mostrar">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mostrarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarEstacionClave">
+<xs:sequence>
+<xs:element name="numeroEstacion" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarEstacionClaveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
