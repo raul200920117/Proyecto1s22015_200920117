@@ -1,0 +1,23 @@
+digraph g { 
+nod1 [shape=record ,color="green", label= " { Id estacion : 1 |  personas : 0 } | { nombre: | equilibrio: 0 }  "] ; 
+nod2 [shape=record ,color="green", label= " { Id estacion : 2 |  personas : 0 } | { nombre: | equilibrio: 0 }  "] ; 
+nod3 [shape=record ,color="green", label= " { Id estacion : 3 |  personas : 0 } | { nombre: | equilibrio: 0 }  "] ; 
+nod4 [shape=record ,color="green", label= " { Id estacion : 4 |  personas : 0 } | { nombre: | equilibrio: 1 }  "] ; 
+nod5 [shape=record ,color="green", label= " { Id estacion : 5 |  personas : 0 } | { nombre: | equilibrio: 0 }  "] ; 
+nod6 [shape=record ,color="green", label= " { Id estacion : 6 |  personas : 0 } | { nombre: | equilibrio: 0 }  "] ; 
+nod7 [shape=record ,color="green", label= " { Id estacion : 7 |  personas : 0 } | { nombre: | equilibrio: 0 }  "] ; 
+nod8 [shape=record ,color="green", label= " { Id estacion : 8 |  personas : 0 } | { nombre: | equilibrio: 0 }  "] ; 
+nod9 [shape=record ,color="green", label= " { Id estacion : 9 |  personas : 0 } | { nombre: | equilibrio: 1 }  "] ; 
+nod10 [shape=record ,color="green", label= " { Id estacion : 10 |  personas : 0 } | { nombre: | equilibrio: 0 }  "] ; 
+
+nod2 -> nod1 [color = red] ; 
+nod2 -> nod3 [color = red] ; 
+nod4 -> nod2 [color = red] ; 
+nod4 -> nod8 [color = red] ; 
+nod6 -> nod5 [color = red] ; 
+nod6 -> nod7 [color = red] ; 
+nod8 -> nod6 [color = red] ; 
+nod8 -> nod9 [color = red] ; 
+nod9 -> nod10 [color = red] ; 
+
+} 

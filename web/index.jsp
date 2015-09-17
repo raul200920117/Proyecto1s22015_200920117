@@ -86,9 +86,10 @@
     
     %>
     <%-- end web service invocation --%><hr/>
+ 
+    <img src="images/AVLclave.jpg" width="1037" height="405" alt="AVLclave"/>
 
     
-
 </body>
     
 </html>
