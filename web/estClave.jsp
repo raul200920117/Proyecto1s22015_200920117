@@ -13,6 +13,16 @@
         <link href="CSS/newcss.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="Titulo" align="center">
+           <h1>Estacion Clave</h1>
+        </div>
+    
+        
+        <div class="barra" align="center">
+        <table width="250" border="0" cellspacing="0" cellpadding="0">
+           
+        </table>
+            
+        </div>
     </body>
 </html>
