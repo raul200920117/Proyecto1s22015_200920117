@@ -47,11 +47,18 @@
 	java.lang.String nombre = request.getParameter("ingresar");
 	java.lang.String pass = request.getParameter("pass");
 	// TODO process result here
-	boolean result = port.login(nombre, pass);
-        if(result){
-           response.sendRedirect("admin.jsp");
+	int result = port.login(nombre, pass);
+        
+        if(result == 1){
+            response.sendRedirect("admin.jsp");
+        }else if(result == 2){
+            response.sendRedirect("estClave.jsp");
+        }else if(result == 3){
+            response.sendRedirect("estGeneral.jsp");   
+        }else if(result == 4){
+            response.sendRedirect("chofer.jsp");
         }else{
-	out.println("<h1> la contraseña o el usuario no son validos</h1>");
+            out.println("<h1> la contraseña o el usuario no son validos</h1>");
         }
     } catch (Exception ex) {
 	// TODO handle custom exceptions here

@@ -37,6 +37,24 @@
         </table></td>
         </div>
         
+                
+        <h3>AVL de estaciones clave</h3>
+        
+        
+        <h3>AVL de estaciones generales</h3>
+
+        
+        <h3>AVL de administradores</h3>
+        
+        
+        <h3>Lista de Estaciones</h3>
+        
+        
+        <h3>Lista de Buses</h3>
+        
+        
+        <h3>AVL de Choferes </h3>
+        
         
         
     </body>

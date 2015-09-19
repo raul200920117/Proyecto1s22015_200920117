@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://estructura/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://estructura/">
 
+<xs:element name="addAdmin" type="tns:addAdmin" />
+
+<xs:element name="addAdminResponse" type="tns:addAdminResponse" />
+
+<xs:element name="addEstacionGeneral" type="tns:addEstacionGeneral" />
+
+<xs:element name="addEstacionGeneralResponse" type="tns:addEstacionGeneralResponse" />
+
 <xs:element name="borrarEstacionClave" type="tns:borrarEstacionClave" />
 
 <xs:element name="borrarEstacionClaveResponse" type="tns:borrarEstacionClaveResponse" />
@@ -50,6 +58,33 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="addEstacionGeneral">
+<xs:sequence>
+<xs:element name="id_estacion" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="contraseña" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEstacionGeneralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAdmin">
+<xs:sequence>
+<xs:element name="correo" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="login">
 <xs:sequence>
 <xs:element name="nombre" type="xs:string" minOccurs="0" />
@@ -59,7 +94,7 @@
 
 <xs:complexType name="loginResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:boolean" />
+<xs:element name="return" type="xs:int" />
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

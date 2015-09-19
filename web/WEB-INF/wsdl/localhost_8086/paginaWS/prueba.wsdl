@@ -10,17 +10,17 @@
 <message name="loginResponse">
 <part name="parameters" element="tns:loginResponse" />
 </message>
-<message name="mostrar">
-<part name="parameters" element="tns:mostrar" />
+<message name="addEstacionGeneral">
+<part name="parameters" element="tns:addEstacionGeneral" />
 </message>
-<message name="mostrarResponse">
-<part name="parameters" element="tns:mostrarResponse" />
+<message name="addEstacionGeneralResponse">
+<part name="parameters" element="tns:addEstacionGeneralResponse" />
 </message>
-<message name="hello">
-<part name="parameters" element="tns:hello" />
+<message name="addAdmin">
+<part name="parameters" element="tns:addAdmin" />
 </message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse" />
+<message name="addAdminResponse">
+<part name="parameters" element="tns:addAdminResponse" />
 </message>
 <message name="borrarEstacionClave">
 <part name="parameters" element="tns:borrarEstacionClave" />
@@ -28,22 +28,42 @@
 <message name="borrarEstacionClaveResponse">
 <part name="parameters" element="tns:borrarEstacionClaveResponse" />
 </message>
+<message name="hello">
+<part name="parameters" element="tns:hello" />
+</message>
+<message name="helloResponse">
+<part name="parameters" element="tns:helloResponse" />
+</message>
+<message name="mostrar">
+<part name="parameters" element="tns:mostrar" />
+</message>
+<message name="mostrarResponse">
+<part name="parameters" element="tns:mostrarResponse" />
+</message>
 <portType name="prueba">
 <operation name="login">
 <input wsam:Action="http://estructura/prueba/loginRequest" message="tns:login" />
 <output wsam:Action="http://estructura/prueba/loginResponse" message="tns:loginResponse" />
 </operation>
-<operation name="mostrar">
-<input wsam:Action="http://estructura/prueba/mostrarRequest" message="tns:mostrar" />
-<output wsam:Action="http://estructura/prueba/mostrarResponse" message="tns:mostrarResponse" />
+<operation name="addEstacionGeneral">
+<input wsam:Action="http://estructura/prueba/addEstacionGeneralRequest" message="tns:addEstacionGeneral" />
+<output wsam:Action="http://estructura/prueba/addEstacionGeneralResponse" message="tns:addEstacionGeneralResponse" />
+</operation>
+<operation name="addAdmin">
+<input wsam:Action="http://estructura/prueba/addAdminRequest" message="tns:addAdmin" />
+<output wsam:Action="http://estructura/prueba/addAdminResponse" message="tns:addAdminResponse" />
+</operation>
+<operation name="borrarEstacionClave">
+<input wsam:Action="http://estructura/prueba/borrarEstacionClaveRequest" message="tns:borrarEstacionClave" />
+<output wsam:Action="http://estructura/prueba/borrarEstacionClaveResponse" message="tns:borrarEstacionClaveResponse" />
 </operation>
 <operation name="hello">
 <input wsam:Action="http://estructura/prueba/helloRequest" message="tns:hello" />
 <output wsam:Action="http://estructura/prueba/helloResponse" message="tns:helloResponse" />
 </operation>
-<operation name="borrarEstacionClave">
-<input wsam:Action="http://estructura/prueba/borrarEstacionClaveRequest" message="tns:borrarEstacionClave" />
-<output wsam:Action="http://estructura/prueba/borrarEstacionClaveResponse" message="tns:borrarEstacionClaveResponse" />
+<operation name="mostrar">
+<input wsam:Action="http://estructura/prueba/mostrarRequest" message="tns:mostrar" />
+<output wsam:Action="http://estructura/prueba/mostrarResponse" message="tns:mostrarResponse" />
 </operation>
 </portType>
 <binding name="pruebaPortBinding" type="tns:prueba">
@@ -57,7 +77,25 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="mostrar">
+<operation name="addEstacionGeneral">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="addAdmin">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="borrarEstacionClave">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -75,7 +113,7 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="borrarEstacionClave">
+<operation name="mostrar">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
