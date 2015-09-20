@@ -1,9 +1,9 @@
 digraph g { 
-nod56 [shape=record ,color="cyan", label= " { id : 56 }  "] ; 
-nod78 [shape=record ,color="cyan", label= " { id : 78 }  "] ; 
-nod89 [shape=record ,color="cyan", label= " { id : 89 }  "] ; 
+nod453 [shape=record ,color="cyan", label= " { id : 453 }  "] ; 
+nod567 [shape=record ,color="cyan", label= " { id : 567 }  "] ; 
+nod234 [shape=record ,color="cyan", label= " { id : 234 }  "] ; 
 
-nod56 -> nod78 [ dir=both color = indigo: red] ;
-nod78 -> nod89 [ dir=both color = indigo: red] ;
+nod453 -> nod567 [ dir=both color = indigo: red] ;
+nod567 -> nod234 [ dir=both color = indigo: red] ;
 
 } 

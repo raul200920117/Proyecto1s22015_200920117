@@ -1,7 +1,7 @@
 digraph g { 
-nodeeretet [shape=record ,color="green", label= " { correo : eeretet |  contraseña: fdfsf } | { equilibrio: 1 }  "] ; 
-nodreret [shape=record ,color="green", label= " { correo : reret |  contraseña: ettrete } | { equilibrio: 0 }  "] ; 
+nodreterter [shape=record ,color="green", label= " { correo : reterter |  contraseña: dfgdfg } | { equilibrio: 1 }  "] ; 
+nodtytry [shape=record ,color="green", label= " { correo : tytry |  contraseña: fgffgd } | { equilibrio: 0 }  "] ; 
 
-nodeeretet -> nodreret [color = red] ; 
+nodreterter -> nodtytry [color = red] ; 
 
 } 

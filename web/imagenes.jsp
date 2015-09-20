@@ -64,7 +64,59 @@
     %>
     <%-- end web service invocation --%><hr/>
     
-    
+        <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	// TODO process result here
+	java.lang.String result = port.admins();
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+    <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	// TODO process result here
+	java.lang.String result = port.buses();
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+
+    <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	// TODO process result here
+	java.lang.String result = port.choferess();
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+    <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	// TODO process result here
+	java.lang.String result = port.generales();
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
 
         </form>
         

@@ -1,5 +1,5 @@
 digraph g { 
-nod5656 [shape=record ,color="green", label= " { Id estacion : 5656 |  personas : 0 } | { nombre: 565656| equilibrio: 0 }  "] ; 
+nod4545 [shape=record ,color="green", label= " { Id estacion : 4545 |  personas : 0 } | { nombre: 4545| equilibrio: 0 }  "] ; 
 
 
 } 
