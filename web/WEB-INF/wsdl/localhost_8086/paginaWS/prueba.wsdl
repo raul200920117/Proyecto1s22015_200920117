@@ -10,29 +10,65 @@
 <message name="loginResponse">
 <part name="parameters" element="tns:loginResponse" />
 </message>
-<message name="addEstacionGeneral">
-<part name="parameters" element="tns:addEstacionGeneral" />
-</message>
-<message name="addEstacionGeneralResponse">
-<part name="parameters" element="tns:addEstacionGeneralResponse" />
-</message>
 <message name="addAdmin">
 <part name="parameters" element="tns:addAdmin" />
 </message>
 <message name="addAdminResponse">
 <part name="parameters" element="tns:addAdminResponse" />
 </message>
-<message name="borrarEstacionClave">
-<part name="parameters" element="tns:borrarEstacionClave" />
+<message name="borrarAdmin">
+<part name="parameters" element="tns:borrarAdmin" />
 </message>
-<message name="borrarEstacionClaveResponse">
-<part name="parameters" element="tns:borrarEstacionClaveResponse" />
+<message name="borrarAdminResponse">
+<part name="parameters" element="tns:borrarAdminResponse" />
 </message>
-<message name="hello">
-<part name="parameters" element="tns:hello" />
+<message name="modifAdmin">
+<part name="parameters" element="tns:modifAdmin" />
 </message>
-<message name="helloResponse">
-<part name="parameters" element="tns:helloResponse" />
+<message name="modifAdminResponse">
+<part name="parameters" element="tns:modifAdminResponse" />
+</message>
+<message name="insertaChofer">
+<part name="parameters" element="tns:insertaChofer" />
+</message>
+<message name="insertaChoferResponse">
+<part name="parameters" element="tns:insertaChoferResponse" />
+</message>
+<message name="modifChofer">
+<part name="parameters" element="tns:modifChofer" />
+</message>
+<message name="modifChoferResponse">
+<part name="parameters" element="tns:modifChoferResponse" />
+</message>
+<message name="borraChofer">
+<part name="parameters" element="tns:borraChofer" />
+</message>
+<message name="borraChoferResponse">
+<part name="parameters" element="tns:borraChoferResponse" />
+</message>
+<message name="insertaBus">
+<part name="parameters" element="tns:insertaBus" />
+</message>
+<message name="insertaBusResponse">
+<part name="parameters" element="tns:insertaBusResponse" />
+</message>
+<message name="borraBus">
+<part name="parameters" element="tns:borraBus" />
+</message>
+<message name="borraBusResponse">
+<part name="parameters" element="tns:borraBusResponse" />
+</message>
+<message name="moverBusClave">
+<part name="parameters" element="tns:moverBusClave" />
+</message>
+<message name="moverBusClaveResponse">
+<part name="parameters" element="tns:moverBusClaveResponse" />
+</message>
+<message name="moverBusGral">
+<part name="parameters" element="tns:moverBusGral" />
+</message>
+<message name="moverBusGralResponse">
+<part name="parameters" element="tns:moverBusGralResponse" />
 </message>
 <message name="mostrar">
 <part name="parameters" element="tns:mostrar" />
@@ -40,30 +76,114 @@
 <message name="mostrarResponse">
 <part name="parameters" element="tns:mostrarResponse" />
 </message>
+<message name="addEstacionClave">
+<part name="parameters" element="tns:addEstacionClave" />
+</message>
+<message name="addEstacionClaveResponse">
+<part name="parameters" element="tns:addEstacionClaveResponse" />
+</message>
+<message name="borrarEstacionClave">
+<part name="parameters" element="tns:borrarEstacionClave" />
+</message>
+<message name="borrarEstacionClaveResponse">
+<part name="parameters" element="tns:borrarEstacionClaveResponse" />
+</message>
+<message name="addEstacionGeneral">
+<part name="parameters" element="tns:addEstacionGeneral" />
+</message>
+<message name="addEstacionGeneralResponse">
+<part name="parameters" element="tns:addEstacionGeneralResponse" />
+</message>
+<message name="borrarEstacionGeneral">
+<part name="parameters" element="tns:borrarEstacionGeneral" />
+</message>
+<message name="borrarEstacionGeneralResponse">
+<part name="parameters" element="tns:borrarEstacionGeneralResponse" />
+</message>
+<message name="modificarEstClave">
+<part name="parameters" element="tns:modificarEstClave" />
+</message>
+<message name="modificarEstClaveResponse">
+<part name="parameters" element="tns:modificarEstClaveResponse" />
+</message>
+<message name="modificarEstGeneral">
+<part name="parameters" element="tns:modificarEstGeneral" />
+</message>
+<message name="modificarEstGeneralResponse">
+<part name="parameters" element="tns:modificarEstGeneralResponse" />
+</message>
 <portType name="prueba">
 <operation name="login">
 <input wsam:Action="http://estructura/prueba/loginRequest" message="tns:login" />
 <output wsam:Action="http://estructura/prueba/loginResponse" message="tns:loginResponse" />
 </operation>
-<operation name="addEstacionGeneral">
-<input wsam:Action="http://estructura/prueba/addEstacionGeneralRequest" message="tns:addEstacionGeneral" />
-<output wsam:Action="http://estructura/prueba/addEstacionGeneralResponse" message="tns:addEstacionGeneralResponse" />
-</operation>
 <operation name="addAdmin">
 <input wsam:Action="http://estructura/prueba/addAdminRequest" message="tns:addAdmin" />
 <output wsam:Action="http://estructura/prueba/addAdminResponse" message="tns:addAdminResponse" />
+</operation>
+<operation name="borrarAdmin">
+<input wsam:Action="http://estructura/prueba/borrarAdminRequest" message="tns:borrarAdmin" />
+<output wsam:Action="http://estructura/prueba/borrarAdminResponse" message="tns:borrarAdminResponse" />
+</operation>
+<operation name="modifAdmin">
+<input wsam:Action="http://estructura/prueba/modifAdminRequest" message="tns:modifAdmin" />
+<output wsam:Action="http://estructura/prueba/modifAdminResponse" message="tns:modifAdminResponse" />
+</operation>
+<operation name="insertaChofer">
+<input wsam:Action="http://estructura/prueba/insertaChoferRequest" message="tns:insertaChofer" />
+<output wsam:Action="http://estructura/prueba/insertaChoferResponse" message="tns:insertaChoferResponse" />
+</operation>
+<operation name="modifChofer">
+<input wsam:Action="http://estructura/prueba/modifChoferRequest" message="tns:modifChofer" />
+<output wsam:Action="http://estructura/prueba/modifChoferResponse" message="tns:modifChoferResponse" />
+</operation>
+<operation name="borraChofer">
+<input wsam:Action="http://estructura/prueba/borraChoferRequest" message="tns:borraChofer" />
+<output wsam:Action="http://estructura/prueba/borraChoferResponse" message="tns:borraChoferResponse" />
+</operation>
+<operation name="insertaBus">
+<input wsam:Action="http://estructura/prueba/insertaBusRequest" message="tns:insertaBus" />
+<output wsam:Action="http://estructura/prueba/insertaBusResponse" message="tns:insertaBusResponse" />
+</operation>
+<operation name="borraBus">
+<input wsam:Action="http://estructura/prueba/borraBusRequest" message="tns:borraBus" />
+<output wsam:Action="http://estructura/prueba/borraBusResponse" message="tns:borraBusResponse" />
+</operation>
+<operation name="moverBusClave">
+<input wsam:Action="http://estructura/prueba/moverBusClaveRequest" message="tns:moverBusClave" />
+<output wsam:Action="http://estructura/prueba/moverBusClaveResponse" message="tns:moverBusClaveResponse" />
+</operation>
+<operation name="moverBusGral">
+<input wsam:Action="http://estructura/prueba/moverBusGralRequest" message="tns:moverBusGral" />
+<output wsam:Action="http://estructura/prueba/moverBusGralResponse" message="tns:moverBusGralResponse" />
+</operation>
+<operation name="mostrar">
+<input wsam:Action="http://estructura/prueba/mostrarRequest" message="tns:mostrar" />
+<output wsam:Action="http://estructura/prueba/mostrarResponse" message="tns:mostrarResponse" />
+</operation>
+<operation name="addEstacionClave">
+<input wsam:Action="http://estructura/prueba/addEstacionClaveRequest" message="tns:addEstacionClave" />
+<output wsam:Action="http://estructura/prueba/addEstacionClaveResponse" message="tns:addEstacionClaveResponse" />
 </operation>
 <operation name="borrarEstacionClave">
 <input wsam:Action="http://estructura/prueba/borrarEstacionClaveRequest" message="tns:borrarEstacionClave" />
 <output wsam:Action="http://estructura/prueba/borrarEstacionClaveResponse" message="tns:borrarEstacionClaveResponse" />
 </operation>
-<operation name="hello">
-<input wsam:Action="http://estructura/prueba/helloRequest" message="tns:hello" />
-<output wsam:Action="http://estructura/prueba/helloResponse" message="tns:helloResponse" />
+<operation name="addEstacionGeneral">
+<input wsam:Action="http://estructura/prueba/addEstacionGeneralRequest" message="tns:addEstacionGeneral" />
+<output wsam:Action="http://estructura/prueba/addEstacionGeneralResponse" message="tns:addEstacionGeneralResponse" />
 </operation>
-<operation name="mostrar">
-<input wsam:Action="http://estructura/prueba/mostrarRequest" message="tns:mostrar" />
-<output wsam:Action="http://estructura/prueba/mostrarResponse" message="tns:mostrarResponse" />
+<operation name="borrarEstacionGeneral">
+<input wsam:Action="http://estructura/prueba/borrarEstacionGeneralRequest" message="tns:borrarEstacionGeneral" />
+<output wsam:Action="http://estructura/prueba/borrarEstacionGeneralResponse" message="tns:borrarEstacionGeneralResponse" />
+</operation>
+<operation name="modificarEstClave">
+<input wsam:Action="http://estructura/prueba/modificarEstClaveRequest" message="tns:modificarEstClave" />
+<output wsam:Action="http://estructura/prueba/modificarEstClaveResponse" message="tns:modificarEstClaveResponse" />
+</operation>
+<operation name="modificarEstGeneral">
+<input wsam:Action="http://estructura/prueba/modificarEstGeneralRequest" message="tns:modificarEstGeneral" />
+<output wsam:Action="http://estructura/prueba/modificarEstGeneralResponse" message="tns:modificarEstGeneralResponse" />
 </operation>
 </portType>
 <binding name="pruebaPortBinding" type="tns:prueba">
@@ -77,7 +197,7 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="addEstacionGeneral">
+<operation name="addAdmin">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -86,7 +206,97 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="addAdmin">
+<operation name="borrarAdmin">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="modifAdmin">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="insertaChofer">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="modifChofer">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="borraChofer">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="insertaBus">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="borraBus">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="moverBusClave">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="moverBusGral">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="mostrar">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="addEstacionClave">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -104,7 +314,7 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="hello">
+<operation name="addEstacionGeneral">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -113,7 +323,25 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="mostrar">
+<operation name="borrarEstacionGeneral">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="modificarEstClave">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="modificarEstGeneral">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />

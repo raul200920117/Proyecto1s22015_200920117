@@ -4,43 +4,126 @@
 
 <xs:element name="addAdminResponse" type="tns:addAdminResponse" />
 
+<xs:element name="addEstacionClave" type="tns:addEstacionClave" />
+
+<xs:element name="addEstacionClaveResponse" type="tns:addEstacionClaveResponse" />
+
 <xs:element name="addEstacionGeneral" type="tns:addEstacionGeneral" />
 
 <xs:element name="addEstacionGeneralResponse" type="tns:addEstacionGeneralResponse" />
+
+<xs:element name="borraBus" type="tns:borraBus" />
+
+<xs:element name="borraBusResponse" type="tns:borraBusResponse" />
+
+<xs:element name="borraChofer" type="tns:borraChofer" />
+
+<xs:element name="borraChoferResponse" type="tns:borraChoferResponse" />
+
+<xs:element name="borrarAdmin" type="tns:borrarAdmin" />
+
+<xs:element name="borrarAdminResponse" type="tns:borrarAdminResponse" />
 
 <xs:element name="borrarEstacionClave" type="tns:borrarEstacionClave" />
 
 <xs:element name="borrarEstacionClaveResponse" type="tns:borrarEstacionClaveResponse" />
 
-<xs:element name="hello" type="tns:hello" />
+<xs:element name="borrarEstacionGeneral" type="tns:borrarEstacionGeneral" />
 
-<xs:element name="helloResponse" type="tns:helloResponse" />
+<xs:element name="borrarEstacionGeneralResponse" type="tns:borrarEstacionGeneralResponse" />
+
+<xs:element name="insertaBus" type="tns:insertaBus" />
+
+<xs:element name="insertaBusResponse" type="tns:insertaBusResponse" />
+
+<xs:element name="insertaChofer" type="tns:insertaChofer" />
+
+<xs:element name="insertaChoferResponse" type="tns:insertaChoferResponse" />
 
 <xs:element name="login" type="tns:login" />
 
 <xs:element name="loginResponse" type="tns:loginResponse" />
 
+<xs:element name="modifAdmin" type="tns:modifAdmin" />
+
+<xs:element name="modifAdminResponse" type="tns:modifAdminResponse" />
+
+<xs:element name="modifChofer" type="tns:modifChofer" />
+
+<xs:element name="modifChoferResponse" type="tns:modifChoferResponse" />
+
+<xs:element name="modificarEstClave" type="tns:modificarEstClave" />
+
+<xs:element name="modificarEstClaveResponse" type="tns:modificarEstClaveResponse" />
+
+<xs:element name="modificarEstGeneral" type="tns:modificarEstGeneral" />
+
+<xs:element name="modificarEstGeneralResponse" type="tns:modificarEstGeneralResponse" />
+
 <xs:element name="mostrar" type="tns:mostrar" />
 
 <xs:element name="mostrarResponse" type="tns:mostrarResponse" />
 
-<xs:complexType name="mostrar">
-<xs:sequence />
+<xs:element name="moverBusClave" type="tns:moverBusClave" />
+
+<xs:element name="moverBusClaveResponse" type="tns:moverBusClaveResponse" />
+
+<xs:element name="moverBusGral" type="tns:moverBusGral" />
+
+<xs:element name="moverBusGralResponse" type="tns:moverBusGralResponse" />
+
+<xs:complexType name="modifChofer">
+<xs:sequence>
+<xs:element name="id_chofer" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="apellido" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="mostrarResponse">
+<xs:complexType name="modifChoferResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="hello">
+<xs:complexType name="borraBus">
 <xs:sequence>
-<xs:element name="name" type="xs:string" minOccurs="0" />
+<xs:element name="id_bus" type="xs:int" />
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="helloResponse">
+<xs:complexType name="borraBusResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEstacionClave">
+<xs:sequence>
+<xs:element name="id_estacion" type="xs:string" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addEstacionClaveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="moverBusClave">
+<xs:sequence>
+<xs:element name="id_bus" type="xs:int" />
+<xs:element name="personas" type="xs:int" />
+<xs:element name="entran_salen" type="xs:boolean" />
+<xs:element name="hora" type="xs:string" minOccurs="0" />
+<xs:element name="estacion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="moverBusClaveResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>
@@ -53,6 +136,124 @@
 </xs:complexType>
 
 <xs:complexType name="borrarEstacionClaveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarEstGeneral">
+<xs:sequence>
+<xs:element name="id_estacion" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarEstGeneralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="moverBusGral">
+<xs:sequence>
+<xs:element name="id_bus" type="xs:int" />
+<xs:element name="personas" type="xs:int" />
+<xs:element name="entran_salen" type="xs:boolean" />
+<xs:element name="estacion" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="moverBusGralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modifAdmin">
+<xs:sequence>
+<xs:element name="correo" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modifAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertaChofer">
+<xs:sequence>
+<xs:element name="id_chofer" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="apellido" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertaChoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarEstClave">
+<xs:sequence>
+<xs:element name="id_estacion" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarEstClaveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarEstacionGeneral">
+<xs:sequence>
+<xs:element name="id_estacion" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarEstacionGeneralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAdmin">
+<xs:sequence>
+<xs:element name="correo" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarAdmin">
+<xs:sequence>
+<xs:element name="correo" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrar">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="mostrarResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>
@@ -72,14 +273,13 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="addAdmin">
+<xs:complexType name="borraChofer">
 <xs:sequence>
-<xs:element name="correo" type="xs:string" minOccurs="0" />
-<xs:element name="password" type="xs:string" minOccurs="0" />
+<xs:element name="id_chofer" type="xs:int" />
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="addAdminResponse">
+<xs:complexType name="borraChoferResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>
@@ -89,12 +289,25 @@
 <xs:sequence>
 <xs:element name="nombre" type="xs:string" minOccurs="0" />
 <xs:element name="pass" type="xs:string" minOccurs="0" />
+<xs:element name="tipo" type="xs:string" minOccurs="0" />
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="loginResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertaBus">
+<xs:sequence>
+<xs:element name="idBus" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertaBusResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

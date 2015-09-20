@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>pagina de login</title>
         <link href="CSS/newcss.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
@@ -29,15 +29,23 @@
   
         
         <form align="center" name="login" action="index.jsp" >
-            Ingresar
-           <h5>Usuario: </h5>
-           <input type="text" name="ingresar" value="0" />
-           <h5>Contraseña: </h5>
-           <input type="password" name="pass" value="0" /><br>
-           <input type="submit" value="ingresar" name="boton1" />     
-        </form>
-        
-            <%-- start web service invocation --%><hr/>
+            <h3>Ingresar</h3>
+            Usuario:   <input type="text" name="ingresar" value="0" /><br>
+            Contraseña:<input type="password" name="pass" value="0" /><br>
+           <select name="dropp">
+               <option value="1">Administrador</option>
+               <option value="2">Clave</option>
+               <option value="3">General</option>
+               <option value="4">Chofer</option>
+               
+           </select>
+           
+           <input type="submit" value="ingresar" name="boton1" />
+           
+           
+           
+           
+                     <%-- start web service invocation --%><hr/>
     <%
         
     try {
@@ -46,15 +54,16 @@
 	 // TODO initialize WS operation arguments here
 	java.lang.String nombre = request.getParameter("ingresar");
 	java.lang.String pass = request.getParameter("pass");
+        java.lang.String tipo = request.getParameter("dropp");
 	// TODO process result here
-	int result = port.login(nombre, pass);
-        
+	int result = port.login(nombre, pass, tipo);
+        out.println("" + result);
         if(result == 1){
             response.sendRedirect("admin.jsp");
         }else if(result == 2){
             response.sendRedirect("estClave.jsp");
         }else if(result == 3){
-            response.sendRedirect("estGeneral.jsp");   
+            response.sendRedirect("estNormal.jsp");   
         }else if(result == 4){
             response.sendRedirect("chofer.jsp");
         }else{
@@ -68,6 +77,9 @@
     %>
     <%-- end web service invocation --%><hr/>
  
+        </form>
+        
+  
     
 </body>
     

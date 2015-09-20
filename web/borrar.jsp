@@ -40,9 +40,24 @@
         <form name="modifAdmin" action="admin.jsp" class="cajaFlotante">
             <h3>Borrar aministrador</h3><br>
             Ingresar correo: <input type="text" name="correo" value="0@0.com" /><br>
-          
             <input type="submit" value="borrar Usuario" name="adminBot" />
       
+                <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	 // TODO initialize WS operation arguments here
+	java.lang.String correo = request.getParameter("correo");
+	// TODO process result here
+	java.lang.String result = port.borrarAdmin(correo);
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+
         </form>
 
         
@@ -51,6 +66,22 @@
             Id_estacion: <input type="text" name="id_clave" value="0" /><br>
             <input type="submit" value="borrar estacion" name="bot" />
        
+                <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	 // TODO initialize WS operation arguments here
+	int numeroEstacion = Integer.parseInt(request.getParameter("id_clave"));
+	// TODO process result here
+	java.lang.String result = port.borrarEstacionClave(numeroEstacion);
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+
         </form>
         
     
@@ -58,14 +89,44 @@
             <h3>Borrar estacion general</h3><br>
             Id estacion: <input type="text" name="id_gral" value="0" /><br>
             <input type="submit" value="borrar estacion" name="bot_ingresar" />
-        
+            <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	 // TODO initialize WS operation arguments here
+	int idEstacion = Integer.parseInt(request.getParameter("id_gral"));
+	// TODO process result here
+	java.lang.String result = port.borrarEstacionGeneral(idEstacion);
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+
         </form>
         
         <form name="modifChofer" action="admin.jsp" class="cajaFlotante">
-            <h4>modificar chofer </h4>
+            <h4>Borrar chofer </h4>
             Clave: <input type="text" name="idChofer" value="0" /><br>
             <input type="submit" value="borrar chofer" name="botChofer" />
-            
+                <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	 // TODO initialize WS operation arguments here
+	int idChofer = Integer.parseInt(request.getParameter("idChofer"));
+	// TODO process result here
+	java.lang.String result = port.borraChofer(idChofer);
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+
         </form>
     
         <form name="modifBus" action="admin.jsp" class="cajaFlotante">
@@ -74,6 +135,22 @@
             <input type="text" name="numBus" value="0" /><br>
             <input type="submit" value="borrar bus" name="agrBus" />
             
+                <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	 // TODO initialize WS operation arguments here
+	int idBus = Integer.parseInt(request.getParameter("numBus"));
+	// TODO process result here
+	java.lang.String result = port.borraBus(idBus);
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+
         </form>
         
         
