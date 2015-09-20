@@ -12,6 +12,10 @@
 
 <xs:element name="addEstacionGeneralResponse" type="tns:addEstacionGeneralResponse" />
 
+<xs:element name="admins" type="tns:admins" />
+
+<xs:element name="adminsResponse" type="tns:adminsResponse" />
+
 <xs:element name="borraBus" type="tns:borraBus" />
 
 <xs:element name="borraBusResponse" type="tns:borraBusResponse" />
@@ -32,9 +36,17 @@
 
 <xs:element name="borrarEstacionGeneralResponse" type="tns:borrarEstacionGeneralResponse" />
 
+<xs:element name="buses" type="tns:buses" />
+
+<xs:element name="busesResponse" type="tns:busesResponse" />
+
 <xs:element name="cargaMasiva" type="tns:cargaMasiva" />
 
 <xs:element name="cargaMasivaResponse" type="tns:cargaMasivaResponse" />
+
+<xs:element name="choferess" type="tns:choferess" />
+
+<xs:element name="choferessResponse" type="tns:choferessResponse" />
 
 <xs:element name="dibujarClave" type="tns:dibujarClave" />
 
@@ -43,6 +55,10 @@
 <xs:element name="dibujarGeneral" type="tns:dibujarGeneral" />
 
 <xs:element name="dibujarGeneralResponse" type="tns:dibujarGeneralResponse" />
+
+<xs:element name="generales" type="tns:generales" />
+
+<xs:element name="generalesResponse" type="tns:generalesResponse" />
 
 <xs:element name="imprimirGraficas" type="tns:imprimirGraficas" />
 
@@ -141,6 +157,16 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="choferess">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="choferessResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="moverBusClave">
 <xs:sequence>
 <xs:element name="id_bus" type="xs:int" />
@@ -198,16 +224,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="dibujarGeneral">
-<xs:sequence />
-</xs:complexType>
-
-<xs:complexType name="dibujarGeneralResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0" />
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="modifAdmin">
 <xs:sequence>
 <xs:element name="correo" type="xs:string" minOccurs="0" />
@@ -216,21 +232,6 @@
 </xs:complexType>
 
 <xs:complexType name="modifAdminResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0" />
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="insertaChofer">
-<xs:sequence>
-<xs:element name="id_chofer" type="xs:int" />
-<xs:element name="nombre" type="xs:string" minOccurs="0" />
-<xs:element name="apellido" type="xs:string" minOccurs="0" />
-<xs:element name="pass" type="xs:string" minOccurs="0" />
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="insertaChoferResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>
@@ -262,16 +263,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="imprimirGraficas">
-<xs:sequence />
-</xs:complexType>
-
-<xs:complexType name="imprimirGraficasResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0" />
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="addAdmin">
 <xs:sequence>
 <xs:element name="correo" type="xs:string" minOccurs="0" />
@@ -290,6 +281,71 @@
 </xs:complexType>
 
 <xs:complexType name="dibujarClaveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generales">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="generalesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buses">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="busesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="admins">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="adminsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dibujarGeneral">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="dibujarGeneralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertaChofer">
+<xs:sequence>
+<xs:element name="id_chofer" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="apellido" type="xs:string" minOccurs="0" />
+<xs:element name="pass" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertaChoferResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="imprimirGraficas">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="imprimirGraficasResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>

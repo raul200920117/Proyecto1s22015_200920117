@@ -1,5 +1,7 @@
 digraph g { 
-nod34@333.com [shape=record ,color="green", label= " { correo : 34@333.com |  contraseña: 3333 } | { equilibrio: 0 }  "] ; 
+nodeeretet [shape=record ,color="green", label= " { correo : eeretet |  contraseña: fdfsf } | { equilibrio: 1 }  "] ; 
+nodreret [shape=record ,color="green", label= " { correo : reret |  contraseña: ettrete } | { equilibrio: 0 }  "] ; 
 
+nodeeretet -> nodreret [color = red] ; 
 
 } 

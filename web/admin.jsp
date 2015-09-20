@@ -186,12 +186,12 @@
     </form>
 
         
-    <form name="masiva" action="admin.jsp">
-        
-        
+    <form name="masiva" action="admin.jsp" class="cajaFlotante">      
+        ingrese el archivo csv de carga
+        <input type="file" name="carga" value="" />
+        <input type="submit" value="cargar csv" name="car" />
     </form>
-    ingrese el archivo csv de carga
-    <input type="file" name="carga" value="" />
-    <input type="submit" value="cargar csv" name="car" />
-    </body>
+    
+    
+      </body> 
 </html>

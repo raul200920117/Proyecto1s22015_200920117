@@ -44,10 +44,32 @@
         </div>
         
 
-        <form name="imag" action="imagenes.jsp">
-            <input value="Reload Page" onclick="ci()" type="button">
+       
+        <input value="Reload Page" onclick="ci()" type="button">
+        
+        <form name="imagenes" action="imagenes.jsp">
+            <input type="submit" value="carga datos" name="carga" />
+        
+            <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	// TODO process result here
+	java.lang.String result = port.imprimirGraficas();
+	out.println("Result = " + result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+    
+    
 
         </form>
+        
+
+     
     
     
 <h3>AVL de estaciones clave</h3> <br>

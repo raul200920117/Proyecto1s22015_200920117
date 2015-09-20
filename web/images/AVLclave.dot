@@ -1,11 +1,5 @@
 digraph g { 
-nod12 [shape=record ,color="green", label= " { Id estacion : 12 |  personas : 0 } | { nombre: 12| equilibrio: 0 }  "] ; 
-nod23 [shape=record ,color="green", label= " { Id estacion : 23 |  personas : 0 } | { nombre: 23| equilibrio: 1 }  "] ; 
-nod24 [shape=record ,color="green", label= " { Id estacion : 24 |  personas : 0 } | { nombre: 024| equilibrio: 0 }  "] ; 
-nod45 [shape=record ,color="green", label= " { Id estacion : 45 |  personas : 0 } | { nombre: 35| equilibrio: -1 }  "] ; 
+nod5345 [shape=record ,color="green", label= " { Id estacion : 5345 |  personas : 0 } | { nombre: 3453| equilibrio: 0 }  "] ; 
 
-nod23 -> nod12 [color = red] ; 
-nod23 -> nod45 [color = red] ; 
-nod45 -> nod24 [color = red] ; 
 
 } 

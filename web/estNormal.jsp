@@ -17,11 +17,15 @@
            <h1>Estacion General</h1>
         </div>
     
+                <div class="barra" align="center">
+           <td><table width="250" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="80"><a href="index.jsp"> <img src="images/salir.jpg" name="salir" width="80" height="39" border="0" /></a></td>
+                
+            </tr>
+        </table></td>
         
-        <div class="barra" align="center">
-        <table width="250" border="0" cellspacing="0" cellpadding="0">
-           
-        </table>
+   
             
             
             <form name="principal" action="estNormal.jsp">
