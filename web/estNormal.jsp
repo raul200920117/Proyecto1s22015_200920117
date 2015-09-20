@@ -35,6 +35,25 @@
                 personas que entran: <input type="text" name="entran" value="0" /><br>
                 personas que salen:  <input type="text" name="salen" value="0" />
                 <input type="submit" value="mover el bus" name="mover" />
+                    <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	estructura.Prueba_Service service = new estructura.Prueba_Service();
+	estructura.Prueba port = service.getPruebaPort();
+	 // TODO initialize WS operation arguments here
+	int idBus = 0;
+	int personas = 0;
+	boolean entranSalen = false;
+	java.lang.String estacion = "";
+	// TODO process result here
+	java.lang.String result = port.moverBusGral(idBus, personas, entranSalen, estacion);
+	out.println(""+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+
             </form>
             
             
