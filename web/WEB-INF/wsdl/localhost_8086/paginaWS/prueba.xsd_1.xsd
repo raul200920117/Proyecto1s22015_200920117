@@ -32,6 +32,22 @@
 
 <xs:element name="borrarEstacionGeneralResponse" type="tns:borrarEstacionGeneralResponse" />
 
+<xs:element name="cargaMasiva" type="tns:cargaMasiva" />
+
+<xs:element name="cargaMasivaResponse" type="tns:cargaMasivaResponse" />
+
+<xs:element name="dibujarClave" type="tns:dibujarClave" />
+
+<xs:element name="dibujarClaveResponse" type="tns:dibujarClaveResponse" />
+
+<xs:element name="dibujarGeneral" type="tns:dibujarGeneral" />
+
+<xs:element name="dibujarGeneralResponse" type="tns:dibujarGeneralResponse" />
+
+<xs:element name="imprimirGraficas" type="tns:imprimirGraficas" />
+
+<xs:element name="imprimirGraficasResponse" type="tns:imprimirGraficasResponse" />
+
 <xs:element name="insertaBus" type="tns:insertaBus" />
 
 <xs:element name="insertaBusResponse" type="tns:insertaBusResponse" />
@@ -71,6 +87,18 @@
 <xs:element name="moverBusGral" type="tns:moverBusGral" />
 
 <xs:element name="moverBusGralResponse" type="tns:moverBusGralResponse" />
+
+<xs:complexType name="cargaMasiva">
+<xs:sequence>
+<xs:element name="datos" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargaMasivaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
 
 <xs:complexType name="modifChofer">
 <xs:sequence>
@@ -170,6 +198,16 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="dibujarGeneral">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="dibujarGeneralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="modifAdmin">
 <xs:sequence>
 <xs:element name="correo" type="xs:string" minOccurs="0" />
@@ -224,6 +262,16 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="imprimirGraficas">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="imprimirGraficasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="addAdmin">
 <xs:sequence>
 <xs:element name="correo" type="xs:string" minOccurs="0" />
@@ -232,6 +280,16 @@
 </xs:complexType>
 
 <xs:complexType name="addAdminResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dibujarClave">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="dibujarClaveResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0" />
 </xs:sequence>

@@ -1,0 +1,11 @@
+digraph g { 
+nod12 [shape=record ,color="cyan", label= " { id : 12 }  "] ; 
+nod23 [shape=record ,color="cyan", label= " { id : 23 }  "] ; 
+nod3444 [shape=record ,color="cyan", label= " { id : 3444 }  "] ; 
+nod6666 [shape=record ,color="cyan", label= " { id : 6666 }  "] ; 
+
+nod12 -> nod23 [ dir=both color = indigo: red] ;
+nod23 -> nod3444 [ dir=both color = indigo: red] ;
+nod3444 -> nod6666 [ dir=both color = indigo: red] ;
+
+} 

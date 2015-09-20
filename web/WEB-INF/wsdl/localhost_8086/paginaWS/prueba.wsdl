@@ -10,6 +10,24 @@
 <message name="loginResponse">
 <part name="parameters" element="tns:loginResponse" />
 </message>
+<message name="dibujarGeneral">
+<part name="parameters" element="tns:dibujarGeneral" />
+</message>
+<message name="dibujarGeneralResponse">
+<part name="parameters" element="tns:dibujarGeneralResponse" />
+</message>
+<message name="imprimirGraficas">
+<part name="parameters" element="tns:imprimirGraficas" />
+</message>
+<message name="imprimirGraficasResponse">
+<part name="parameters" element="tns:imprimirGraficasResponse" />
+</message>
+<message name="mostrar">
+<part name="parameters" element="tns:mostrar" />
+</message>
+<message name="mostrarResponse">
+<part name="parameters" element="tns:mostrarResponse" />
+</message>
 <message name="addAdmin">
 <part name="parameters" element="tns:addAdmin" />
 </message>
@@ -70,12 +88,6 @@
 <message name="moverBusGralResponse">
 <part name="parameters" element="tns:moverBusGralResponse" />
 </message>
-<message name="mostrar">
-<part name="parameters" element="tns:mostrar" />
-</message>
-<message name="mostrarResponse">
-<part name="parameters" element="tns:mostrarResponse" />
-</message>
 <message name="addEstacionClave">
 <part name="parameters" element="tns:addEstacionClave" />
 </message>
@@ -112,10 +124,34 @@
 <message name="modificarEstGeneralResponse">
 <part name="parameters" element="tns:modificarEstGeneralResponse" />
 </message>
+<message name="dibujarClave">
+<part name="parameters" element="tns:dibujarClave" />
+</message>
+<message name="dibujarClaveResponse">
+<part name="parameters" element="tns:dibujarClaveResponse" />
+</message>
+<message name="cargaMasiva">
+<part name="parameters" element="tns:cargaMasiva" />
+</message>
+<message name="cargaMasivaResponse">
+<part name="parameters" element="tns:cargaMasivaResponse" />
+</message>
 <portType name="prueba">
 <operation name="login">
 <input wsam:Action="http://estructura/prueba/loginRequest" message="tns:login" />
 <output wsam:Action="http://estructura/prueba/loginResponse" message="tns:loginResponse" />
+</operation>
+<operation name="dibujarGeneral">
+<input wsam:Action="http://estructura/prueba/dibujarGeneralRequest" message="tns:dibujarGeneral" />
+<output wsam:Action="http://estructura/prueba/dibujarGeneralResponse" message="tns:dibujarGeneralResponse" />
+</operation>
+<operation name="imprimirGraficas">
+<input wsam:Action="http://estructura/prueba/imprimirGraficasRequest" message="tns:imprimirGraficas" />
+<output wsam:Action="http://estructura/prueba/imprimirGraficasResponse" message="tns:imprimirGraficasResponse" />
+</operation>
+<operation name="mostrar">
+<input wsam:Action="http://estructura/prueba/mostrarRequest" message="tns:mostrar" />
+<output wsam:Action="http://estructura/prueba/mostrarResponse" message="tns:mostrarResponse" />
 </operation>
 <operation name="addAdmin">
 <input wsam:Action="http://estructura/prueba/addAdminRequest" message="tns:addAdmin" />
@@ -157,10 +193,6 @@
 <input wsam:Action="http://estructura/prueba/moverBusGralRequest" message="tns:moverBusGral" />
 <output wsam:Action="http://estructura/prueba/moverBusGralResponse" message="tns:moverBusGralResponse" />
 </operation>
-<operation name="mostrar">
-<input wsam:Action="http://estructura/prueba/mostrarRequest" message="tns:mostrar" />
-<output wsam:Action="http://estructura/prueba/mostrarResponse" message="tns:mostrarResponse" />
-</operation>
 <operation name="addEstacionClave">
 <input wsam:Action="http://estructura/prueba/addEstacionClaveRequest" message="tns:addEstacionClave" />
 <output wsam:Action="http://estructura/prueba/addEstacionClaveResponse" message="tns:addEstacionClaveResponse" />
@@ -185,10 +217,45 @@
 <input wsam:Action="http://estructura/prueba/modificarEstGeneralRequest" message="tns:modificarEstGeneral" />
 <output wsam:Action="http://estructura/prueba/modificarEstGeneralResponse" message="tns:modificarEstGeneralResponse" />
 </operation>
+<operation name="dibujarClave">
+<input wsam:Action="http://estructura/prueba/dibujarClaveRequest" message="tns:dibujarClave" />
+<output wsam:Action="http://estructura/prueba/dibujarClaveResponse" message="tns:dibujarClaveResponse" />
+</operation>
+<operation name="cargaMasiva">
+<input wsam:Action="http://estructura/prueba/cargaMasivaRequest" message="tns:cargaMasiva" />
+<output wsam:Action="http://estructura/prueba/cargaMasivaResponse" message="tns:cargaMasivaResponse" />
+</operation>
 </portType>
 <binding name="pruebaPortBinding" type="tns:prueba">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
 <operation name="login">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="dibujarGeneral">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="imprimirGraficas">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="mostrar">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />
@@ -287,15 +354,6 @@
 <soap:body use="literal" />
 </output>
 </operation>
-<operation name="mostrar">
-<soap:operation soapAction="" />
-<input>
-<soap:body use="literal" />
-</input>
-<output>
-<soap:body use="literal" />
-</output>
-</operation>
 <operation name="addEstacionClave">
 <soap:operation soapAction="" />
 <input>
@@ -342,6 +400,24 @@
 </output>
 </operation>
 <operation name="modificarEstGeneral">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="dibujarClave">
+<soap:operation soapAction="" />
+<input>
+<soap:body use="literal" />
+</input>
+<output>
+<soap:body use="literal" />
+</output>
+</operation>
+<operation name="cargaMasiva">
 <soap:operation soapAction="" />
 <input>
 <soap:body use="literal" />

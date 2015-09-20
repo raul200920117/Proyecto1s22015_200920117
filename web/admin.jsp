@@ -23,7 +23,7 @@
            <td><table width="250" border="0" cellspacing="0" cellpadding="0">
             <tr>
                 
-                <td width="80"><a href="#"> <img src="images/agregar.jpg" name="agreg" width="80" height="39" border="0" /></a></td>
+                <td width="80"><a href="#"> <img src="images/agrega.jpg" name="agreg" width="80" height="39" border="0" /></a></td>
                 <td width="4"><img src="images/menu_mid.gif" width="4" height="40" /></td>
                 <td width="80"><a href="imagenes.jsp"> <img src="images/imag.jpg" name="imag" width="80" height="39" border="0" /></a></td>
                 <td width="4"><img src="images/menu_mid.gif" width="4" height="40" /></td>
@@ -31,7 +31,7 @@
                 <td width="4"><img src="images/menu_mid.gif" width="4" height="40" /></td>
                 <td width="80"><a href="reportes.jsp"> <img src="images/reportes.jpg" name="repor" width="80" height="39" border="0" /></a></td>
                 <td width="4"><img src="images/menu_mid.gif" width="4" height="40" /></td>
-                <td width="80"><a href="modif.jsp"> <img src="images/modif.jpg" name="modif" width="80" height="39" border="0" /></a></td>
+                <td width="80"><a href="modif.jsp"> <img src="images/modificar.jpg" name="modif" width="80" height="39" border="0" /></a></td>
                 <td width="4"><img src="images/menu_mid.gif" width="4" height="40" /></td>
                 <td width="80"><a href="index.jsp"> <img src="images/salir.jpg" name="salir" width="80" height="39" border="0" /></a></td>
                 
@@ -186,7 +186,12 @@
     </form>
 
         
-    
-     
+    <form name="masiva" action="admin.jsp">
+        
+        
+    </form>
+    ingrese el archivo csv de carga
+    <input type="file" name="carga" value="" />
+    <input type="submit" value="cargar csv" name="car" />
     </body>
 </html>

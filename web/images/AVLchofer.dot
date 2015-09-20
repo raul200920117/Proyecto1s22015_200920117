@@ -1,0 +1,9 @@
+digraph g { 
+nod45 [shape=record ,color="green", label= " { Id chofer : 45 |  nombre : 45 | apellido: 45 } | { contraseña: 45| equilibrio: 0 }  "] ; 
+nod56 [shape=record ,color="green", label= " { Id chofer : 56 |  nombre : 56 | apellido: 56 } | { contraseña: 56| equilibrio: 0 }  "] ; 
+nod90 [shape=record ,color="green", label= " { Id chofer : 90 |  nombre : 90 | apellido: 90 } | { contraseña: 90| equilibrio: 0 }  "] ; 
+
+nod56 -> nod45 [color = red] ; 
+nod56 -> nod90 [color = red] ; 
+
+} 
